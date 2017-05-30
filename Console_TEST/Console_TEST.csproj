@@ -33,8 +33,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +54,160 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbsentProduct.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Announcement.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="comparison.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__HistoryOfSearchRequestsIMP.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__ModifiedData.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__Renaming01.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatesOfTransfer.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="District.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryOfChangesOfPrice.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryOfReception.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryOfSearchRequest.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IDsOfExistingProduct.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InformationOfSetting.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InhalersComparison.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InhalersPrice.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InhalersProduct.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfSetting.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadedProduct.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogsOfDrugstore.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModificationsOfPrice.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewInhalersComparison.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Operator.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pharm.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pharm.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pharm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pharm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pharm.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Pharmacy.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PREP_MEDENERGOFARM_COMPARISONS.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PREP_ZDOROVO_COMPARISONS.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceIDsTMP.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceListTMP.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="price_list.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrivateImporting.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsFromDL.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product_group.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecodingIDsOfDrugstoresOfImporting.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationOfDrugstore.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsOfImportingOfPriceList.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal.cs">
+      <DependentUpon>Pharm.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="Pharm.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Pharm.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Pharm.edmx.diagram">
+      <DependentUpon>Pharm.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pharm.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Pharm.edmx</DependentUpon>
+      <LastGenOutput>Pharm.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Pharm.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Pharm.edmx</DependentUpon>
+      <LastGenOutput>Pharm.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
